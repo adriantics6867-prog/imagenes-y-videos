@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIMEDIA</title>
+</head>
+<body>
+
+      <h1>MI PAGINA CON IMAGENES Y VIDEOS</h1>
+<br>
+    <img src="https://images.pexels.com/photos/38938029/pexels-photo-38938029.jpeg" alt="35" width="35%" height="35%">
+
+    <img src="https://images.pexels.com/photos/11743337/pexels-photo-11743337.jpeg" alt="10%" width="35%" height="35%">
+<br>
+<video src="https://www.pexels.com/es-es/download/video/3818936/" autoplay loop controls alt="35" width="35%" height="35%">
+
+</video>
+<br>
+
+    <style>
+
+        img 
+        {
+          max-width: 50%;
+           height: 50%;
+             border-radius: 20%;
+        }
+
+
+            video 
+            {
+              max-width: 50%;
+               height: 50%;
+                border-radius: 20%;
+                
+            }
+    </style>
+<audio id="musicaFondo" src="c:\Users\EstudianteUsuario\Downloads\spellbound-official-music-video.mp3" loop></audio>
+<button id="botonMusica">▶ Reproducir música</button>
+<Script>
+const audio = document.getElementById('musicaFondo');
+const boton = document.getElementById('botonMusica');
+boton.addEventListener('click', () => {
+if (audio.paused) { audio.play(); boton.textContent = '⏸ Pausar música'; }
+else { audio.pause(); boton.textContent = '▶ Reproducir música'; }
+});
+
